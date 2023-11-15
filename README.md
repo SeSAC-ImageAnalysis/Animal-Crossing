@@ -6,7 +6,8 @@
 #### 나와 닮은 동숲 주민은?
 - 내 얼굴과 가장 비슷한 주민을 찾아보자
 
-## 로고 (아직 미완성입니다)
-![](https://i.imgur.com/x9cLTKT.png)
+## 로고
+
+![](https://i.imgur.com/e6t0WFx.png)
 <br>
 
