@@ -39,32 +39,79 @@
 ![](https://i.imgur.com/b8qGYGJ.png)
 #### 동숲 닮은 꼴 찾기
 ![](https://i.imgur.com/mwf8huk.png)
+### 플로우 차트
+![](https://i.imgur.com/5ZMoRpD.jpg)
 
-### 기능 2
-
-### 기능 3
-
-### 기능 4
 
 <br>
 
 ## 구현 기능
 
-### 기능 1
+### 1.1 인생네컷 프레임 생성
+[kohya_ss](https://github.com/bmaltais/kohya_ss)
+```
+1. kohya_ss 공식 github에서 클론하기
+2. 데이터셋을 활용하여 생성한 SDXL-Lora 모델 활용
+3. ComfyUI로 인생네컷 프레임 배경 생성
+```
+**결과**
+![](https://i.imgur.com/6SSuL4G.png)
+![](https://i.imgur.com/v9aNKWr.png)
+![](https://i.imgur.com/WL4nske.png)
+![](https://i.imgur.com/pJAzErT.png)
 
-### 기능 2
+### 1.2 인생네컷 주민 생성
+```
+1. 주민 얼굴 380개의 데이터셋을 활용하여 Lora 생성
+2. ComfyUI로 주민 얼굴 생성
+```
+**결과**
+![](https://i.imgur.com/MOYhTQf.png)
+![](https://i.imgur.com/VXnSFNq.png)
+![](https://i.imgur.com/TgyjAz2.png)
+![](https://i.imgur.com/3dGrjPk.png)
 
-### 기능 3
+### 1.3 얼굴 => 캐릭터 변환
+```
+1. 랜덤 얼굴 생성 페이지에서 랜덤한 얼굴 생성 크롤링
+2. 얼굴만 활용하기 위해서 배경 제거
+3. Lora 생성 후 Stable Diffusion을 사용해 얼굴 변환
+4. api 생성해서 웹에서 호출
+```
+**결과**
+![Input 이미지](https://i.imgur.com/O9Fwp2K.png)
+![Output 이미지1](https://i.imgur.com/GOohflh.png)
+![Output 이미지2](https://i.imgur.com/Xbx8oe1.png)
+![Output 이미지3](https://i.imgur.com/UQjw9M1.png)
+![Output 이미지4](https://i.imgur.com/HAv0tkY.png)
 
-### 기능 4
+### 2.1 닮은 꼴 찾기
+```
+1. ViT를 이용하여 AutoEncoder 구조로 인코더와 디코더 둘 다 주민 이미지를 넣어서 학습
+2. faiss 알고리즘을 활용하여 닮은 꼴 찾기 생성
+3. huggingface에 있는 pipeline함수를 이용해서 gradio로 웹 api 구현
+```
+![Input 이미지](https://i.imgur.com/VtPdTpK.png)
+![Output 이미지](https://i.imgur.com/nMNc8Qu.png)
+
+
+### [웹페이지 구현](https://animal-forest-smoky.vercel.app/)
+```
+Next.js를 통해 구현
+```
+
 
 <br>
 
-## 배운 점 & 아쉬운 점
+## 개선사항
 
 <p align="justify">
 
 </p>
+
+1. api 호출 문제 개선을 통해 기획한 대로 웹페이지 전체 구현
+2. 적합한 모델을 찾기 위한 추가 리서치 필요
+3. 모델들을 하나로 병합하여 멀티모달 서비스 구축
 
 <br>
 
